@@ -1,5 +1,8 @@
-# Your 'main.tf' code goes here.
+resource "oci_identity_dynamic_group" "dynamic_group" {
+    #Required
+    compartment_id = var.tenancy_ocid
+    description = var.dynamic_group_description
+    matching_rule = var.matching_rule
+    name = var.dynamic_group_name
+}
 
-# You should create additional files if relevant for your project:
-# * 'outputs.tf' to declare your output variables
-# * 'data.tf' to declare your data sources
